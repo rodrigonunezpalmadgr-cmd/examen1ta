@@ -37,26 +37,35 @@ class CuentaBancaria:
         print(f"Saldo: {self.saldo}")
 
 
+
 print("=======MENNU==========")
 print("1: Crear Cuenta")
 print("2: Mostrar Cuenta")
 print("3: Depositar Dinero")
 print("4: Retirar Dinero")
 print("5: Salir")
-
 opcion = int(input("Elige una opcion del 1 al 5: "))
-while opcion < 1 or opcion > 5:
-    print("Opcion no valida, elige una opcion del 1 al 5")
+while opcion >= 1 or opcion <= 5:
+    #print("Opcion no valida, elige una opcion del 1 al 5")
+    
+
+    if opcion == 1:
+        CuentaBancaria.crear_cuenta()
+    elif opcion == 2:
+        CuentaBancaria.mostrar_cuenta()
+    elif opcion == 3:
+        CuentaBancaria.depositar()
+
+    elif opcion == 4:
+        CuentaBancaria.retirar()
+    elif opcion == 5:
+        print("Saliendo del programa...")
+    
+    print("=======MENNU==========")
+    print("1: Crear Cuenta")
+    print("2: Mostrar Cuenta")
+    print("3: Depositar Dinero")
+    print("4: Retirar Dinero")
+    print("5: Salir")
+        
     opcion = int(input("Elige una opcion del 1 al 5: "))
-
-if opcion == 1:
-    CuentaBancaria.crear_cuenta()
-elif opcion == 2:
-    CuentaBancaria.mostrar_cuenta()
-elif opcion == 3:
-    CuentaBancaria.depositar()
-
-elif opcion == 4:
-    CuentaBancaria.retirar()
-elif opcion == 5:
-    print("Saliendo del programa...")
